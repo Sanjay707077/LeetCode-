@@ -1,18 +1,7 @@
-import java.util.*;
-
 class Solution {
-
     public boolean isHappy(int n) {
 
-        HashSet<Integer> seen = new HashSet<>();
-
-        while(n != 1) {
-
-            if(seen.contains(n)) {
-                return false;
-            }
-
-            seen.add(n);
+        while(n != 1 && n != 4) {
 
             String s = Integer.toString(n);
 
@@ -28,7 +17,12 @@ class Solution {
             n = sum;
         }
 
-        return true;
+        if(n == 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
 
