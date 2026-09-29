@@ -1,23 +1,10 @@
 class Solution {
     public int[] shuffle(int[] nums, int n) {
-        int[] arr1=new int[n];
-        int[] arr2= new int[n];
         int[] result=new int[nums.length];
-        for(int i=0;i<nums.length;i++)
+        for(int i=0;i<nums.length/2;i++)
         {
-            if(i<n)
-            {
-                arr1[i]= nums[i];
-            }
-            else
-            {
-                arr2[i-n]=nums[i];
-            }
-        }
-        int r=0;
-        for(int j=0;j<n;j++){
-           result[r++]=arr1[j];
-           result[r++]=arr2[j];
+            result[2*i]=nums[i];
+            result[2*i+1]=nums[i+n];
         }
         return result;
     }
