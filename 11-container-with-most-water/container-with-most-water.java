@@ -3,7 +3,7 @@ class Solution {
         int l=0;
         int r=height.length-1;
         int max=0;
-        for(int i=0;i<height.length;i++)
+        while(l<r)
         {
             int n=height[l];
             int m=height[r];
